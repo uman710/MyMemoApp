@@ -1,5 +1,4 @@
 import {ScrollView, StyleSheet, Text, View} from "react-native"
-import Header from "../../components/Header"
 import CircleButton from "../../components/CircleButton"
 import Icon from "../../components/icon";
 import {router} from "expo-router";
@@ -11,8 +10,6 @@ const handlePress = () => {
 const Detail = () => {
   return (
     <View style={styles.container}>
-      <Header />
-
       <View style={styles.memoHeader}>
         <Text style={styles.memoTitle}>買い物リスト</Text>
         <Text style={styles.memoDate}>2025/01/26 10:10</Text>
@@ -26,7 +23,7 @@ const Detail = () => {
         </Text>
       </ScrollView>
 
-      <CircleButton style={{ top: 160, bottom: 'auto' }} onPress={handlePress}>
+      <CircleButton style={{ top: 60, bottom: 'auto' }} onPress={handlePress}>
         <Icon name="pencil" size={40} color='#ffffff' />
       </CircleButton>
 
