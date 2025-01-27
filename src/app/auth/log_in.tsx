@@ -6,7 +6,7 @@ const handlePress = (): void => {
   // todo ログイン実装
 
   // ログイン後に画面遷移
-  router.push('/memo/list')
+  router.replace('/memo/list')
 }
 
 const LogIn = () => {
