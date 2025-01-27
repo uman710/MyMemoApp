@@ -1,16 +1,17 @@
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet, Text, TouchableOpacity} from "react-native"
 
 interface Props {
   label: string,
+  onPress?: () => void,
 }
 
 const Button = (props: Props) => {
-  const { label } = props
+  const { label, onPress } = props
 
   return (
-    <View style={styles.button}>
+    <TouchableOpacity onPress={onPress} style={styles.button}>
       <Text style={styles.buttonLabel}>{label}</Text>
-    </View>
+    </TouchableOpacity>
   )
 }
 

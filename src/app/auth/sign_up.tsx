@@ -1,4 +1,4 @@
-import {View, StyleSheet, Text, TextInput} from "react-native"
+import {StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native"
 import Header from "../../components/Header";
 import Button from "../../components/button";
 
@@ -13,7 +13,9 @@ const SingUp = () => {
         <Button label='Submit' />
         <View style={styles.footer}>
           <Text style={styles.footerText}>Already registered?</Text>
-          <Text style={styles.footerLink}>Log In here!</Text>
+          <TouchableOpacity>
+            <Text style={styles.footerLink}>Log In here!</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>

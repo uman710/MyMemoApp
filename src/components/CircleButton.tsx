@@ -1,4 +1,4 @@
-import {Text, View, StyleSheet, type ViewStyle} from "react-native";
+import {StyleSheet, Text, TouchableOpacity, type ViewStyle} from "react-native";
 
 interface Props {
   children: JSX.Element
@@ -9,9 +9,9 @@ const CircleButton = (props: Props) => {
   const { children, style } = props
 
   return (
-    <View style={[styles.circleButton, style]}>
+    <TouchableOpacity style={[styles.circleButton, style]}>
       <Text style={styles.circleButtonLabel}>{children}</Text>
-    </View>
+    </TouchableOpacity>
   )
 }
 
