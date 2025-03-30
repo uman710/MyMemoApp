@@ -1,9 +1,10 @@
-import { Alert, KeyboardAvoidingView, StyleSheet, TextInput, View, Text } from 'react-native'
+import { Alert, StyleSheet, TextInput, View, Text } from 'react-native'
 import CircleButton from '../../components/CircleButton'
 import Icon from '../../components/Icon'
 import { router } from 'expo-router'
 import { useState } from 'react'
 import { postMemo } from '../../clients/memo-client'
+import KeyboardAvoidingView from "../../components/KeyboardAvoidingView";
 
 const handlePressCreate = async (title: string, content: string) => {
     try {
@@ -21,7 +22,7 @@ const Create = () => {
     const [draftMemo, setDraftMemo] = useState<string>('')
 
     return (
-        <KeyboardAvoidingView behavior="height" style={styles.container}>
+        <KeyboardAvoidingView style={styles.container}>
             <View style={styles.inputContainer}>
                 <Text>Title</Text>
                 <TextInput style={styles.inputTitle} autoCapitalize="none" value={draftTitle} onChangeText={(text) => setDraftTitle(text)} testID="Title" />

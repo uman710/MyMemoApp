@@ -1,10 +1,11 @@
-import {Alert, KeyboardAvoidingView, StyleSheet, TextInput, View} from 'react-native'
+import {Alert, StyleSheet, TextInput, View} from 'react-native'
 import CircleButton from '../../components/CircleButton'
 import Icon from '../../components/Icon'
 import { router, useLocalSearchParams } from 'expo-router'
 import { useState, useEffect } from 'react'
 import { GetMemoResponse, Memo } from '../../models/memos'
 import { getMemos, patchMemo } from '../../clients/memo-client'
+import KeyboardAvoidingView from "../../components/KeyboardAvoidingView";
 
 const Edit = () => {
     const { id } = useLocalSearchParams()
@@ -42,7 +43,7 @@ const Edit = () => {
     }
 
     return (
-        <KeyboardAvoidingView behavior="height" style={styles.container}>
+        <KeyboardAvoidingView style={styles.container}>
             <View style={styles.inputContainer}>
                 <TextInput testID="TextInput" multiline={true} style={styles.input} value={editedContent} onChangeText={(text) => setEditedContent(text)} />
             </View>
